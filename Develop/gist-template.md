@@ -21,21 +21,73 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+1. The string is 3-16 characters long.
+2. The string can contain:
+    -any lower case a-z
+    -any number 0-9
+    -an underscore or hyphen
+
 
 ### Anchors
-
+Anchors are the characters ^ or $.
+-With the ^ anchor, it shows that a string with characters will follow. This could happen in two different context.
+    -With an exact string match
+    -a grouping of possible matches
+-With the $ anchor, it will end the string. It follows the same two contexts as ^
 ### Quantifiers
+-The last requirement of the regex is the length of the string. A quantifier will set the limits on the string that is used in regex mataches. Quantifiers constantly look for the limits that can be used to find a match. 
+Quantifiers are greedy, as they will find any patterns that they find. 
+    They look for patterns like:
+    *- matches zero or more times
+    +- matches one or times
+    ?- matches zero or one time
+    {}- has 3 different limites
+        1. {n}- which matches the pattern n times exactly
+        2.{n, } which matches the pattern n times exactly
+        3.{n, x} which matches from a minimun n to a maximum of x
+If you add a ? to the quantifiers, it makes it lazy which makes it match only a few occurences as possible.          
 
+
+
+    -
 ### OR Operator
+A bracket expression does not need to meet all of requirements to make or look for a pattern. You can include one or two in the pattern.
+Outside of the bracket you can add the same logic. One or two special characters, within a grouping contruct or two different constructors.
+### Character Escapes 
+The \ (backlash) escapes character instead of looking at it literally. The way this translates is that if you include the \ before the ({), it changes the curly bracket to look for a curly brack instead of looking for a quantifier. The back slash is common looking for strings with characters that are the same within the pattern.
 
+All special characters including (\) lose their special significance inside the bracket expression. 
+
+ 
 ### Character Classes
+A character class is defined in an input string when looking for a match. 
+    Character classes:
+        -Bracket expressions (as described above)
+        -positive and negative character groups
+        -. matches any character except newline character
+        -\d matches any arabic numeral digit. Very similiar to bracket expresson [0-9] 
+        -\w matches of alphanumeric from latin alphabet including _ -This class is the same to the bracket expression [A-Za-z0-9_]
+        -\s matches a single whitespace character. It can include tabs and line breaks.  
+        Lastly, the last three classes change be changed to do inverse search. This is done by capitals the letter character. 
+
 
 ### Flags
+A regex have to be wrapped in slash characters, with some exceptions. There are six total things called Flags that you need to be aware of. The three below are the most likely ones that you are run into.
+1. g- global search, testing targets all possible matches in a string
+2. i case-insensitive search: case should be ignore in any search. 
+3. m multi-line search: multi-line input string which would treated as multiple lines.
 
 ### Grouping and Capturing
 
 ### Bracket Expressions
-
+-Anything that is inside the square brackets. This can stand for the characters that are being matched. 
+-Another name for bracket expressions is positive character group.
+-Often the hyphen is used between alphnumeric character, like abc or 123
+    I.E. - [a-c] = [abc]
+    I.E. - [1-3] = [123]
+ Special character are either the underscore _ or the hyphen -. Special characters can be any non alphanumeric characters. There is a hyphen that is used in alphanumeric but it is used different and you must noted the difference. 
+ When a combination of the above is put together, it will match any string This is combination of lowercase letters a-z, and any number 0-9, and the special characters.
+ NOTE: these strings do not include any upper case letters.      
 ### Greedy and Lazy Match
 
 ### Boundaries
