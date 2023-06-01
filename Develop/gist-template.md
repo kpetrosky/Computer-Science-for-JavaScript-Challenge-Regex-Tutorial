@@ -1,11 +1,15 @@
 # Title (replace with your title)
 
-Introductory paragraph (replace this with your text)
+Hello,
+This gist is available to help explain REGEX or Regular expressions. Regex is a sequence of characters can cen be used to define a search pattern. WIthin computer science, in programming, and text processing, you can use the powerful tool to find, match, and manipulate a string based on what pattern you search for.  Regex provides a way to to perform taskes like searching for words or patterns, validating input, extracting data, and/or replacing text. Many programming language and text editors, which allows for greater use.
+
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
-//explain that i am going to explain what regex but also define this string
+The regex that I will be using for examples today, is /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/. This string is often used to validate emaill address. When this string is used to search for patterns, it will check to see if an email with match a specfic pattern. When using this string, it will check to make sure that the email is validated, has a domain name, and top level domain. It is possible that this string will not cover all email and has limitations depending requirements. 
+
+This is the string that I will be explaining in this gist. 
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Table of Contents
 
@@ -31,6 +35,13 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
     example: <"abc_123">
 
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+
+matches components: 
+-a-z (case sensitive)
+-0-9 
+- _ (underscore)
+- - (hyphen)
 
 ### Anchors
 Anchors are the characters ^ or $.
@@ -64,6 +75,10 @@ All special characters including (\) lose their special significance inside the 
 
 \3= looks for "3" instead of looking for 3 matches.
 [\3]= loses all significance beyond whatever the string matches 
+
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+ matches component
+ -\.
  
 ### Character Classes
 A character class is defined in an input string when looking for a match. 
@@ -102,6 +117,10 @@ Capturing groups treat multiple character as single unit. To capture a group by 
 If you add a ? to the quantifiers, it makes it lazy which makes it match only a few occurences as possible.          
 
 Quantifiers are greedy, as they will find any patterns that they find. 
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+matches component
+-+ matches other strings, one to unlimited times.
+{2,6} matches other strings btween 2 and 6 times, as many times as possible to match
  
 ### Boundaries
 Boundary markers like ^ or $ allow the search to focused on the pattern at the beginning and end of the line/ string. If you would like to have a literal match, you will have to escape using a backlash. (see character escape above).
@@ -118,4 +137,4 @@ Lookaheads and lookbehinds are often called lookarounds. These tyes of capture g
 Traversing is a process where each element of the data structure is access. Lookarounds traverse around at the beginning of the line. Lookbehinds traverses at the end of the line. 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Krystal Petroky. 
