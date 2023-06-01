@@ -137,4 +137,5 @@ Lookaheads and lookbehinds are often called lookarounds. These tyes of capture g
 Traversing is a process where each element of the data structure is access. Lookarounds traverse around at the beginning of the line. Lookbehinds traverses at the end of the line. 
 ## Author
 
-My name is Krystal Petroky. 
+My name is Krystal Petrosky. 
+https://github.com/kpetrosky/Computer-Science-for-JavaScript-Challenge-Regex-Tutorial
